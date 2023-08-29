@@ -48,7 +48,4 @@ public class Todo {
     public void setPriority(String priority) {
         this.priority = priority;
     }
-
-     
-    
 }

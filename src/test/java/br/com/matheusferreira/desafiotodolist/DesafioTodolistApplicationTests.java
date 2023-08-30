@@ -36,7 +36,12 @@ class DesafioTodolistApplicationTests {
 
 	@Test
 	void failTodoCreation() {
-		
+		webTestClient
+			.post()
+			.uri("/todos")
+			.bodyValue(new Todo("", "", false, 1))
+			.exchange()
+			.expectStatus().isBadRequest();
 	}
 
 }
